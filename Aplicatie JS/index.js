@@ -1,6 +1,7 @@
-var a= document.getElementById('introdu').value;
+
 
 window.addEventListener("load", function isOdd(){
+var a= document.getElementById('introdu').value;
 	if(typeof a != number) 
 
 		alert (a+"is not a valid value. Please write a number");
