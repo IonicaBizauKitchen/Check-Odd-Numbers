@@ -1,21 +1,26 @@
+window.addEventListener("load", function() {
+    var inputEl = document.getElementById('introdu');
 
+    function isOdd() {
 
-window.addEventListener("load", function isOdd(){
-var a= document.getElementById('introdu').value;
-	if(typeof a != number) 
+        if (!inputEl.value) {
+            return alert("Please enter a number.");
+        }
 
-		alert (a+"is not a valid value. Please write a number");
+        var inputNumber = Number(inputEl.value);
 
-	else{
+        if (isNaN(inputNumber)) {
+            return alert(inputEl.value + " is not a valid value. Please enter a number.");
+        }
 
-		if(a%2==1)
-			alert(a+"is an odd number");
-		else
-			alert(a+"is not an odd number ");
-	}
-		
+        if (inputNumber % 2 == 1) {
+            alert(inputNumber + " is an odd number");
+        } else {
+            alert(inputNumber + " is not an odd number ");
+        }
+    }
+
+    document.getElementById("verify").addEventListener("click", function() {
+        isOdd();
+    });
 });
-
-
-
-
